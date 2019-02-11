@@ -1,0 +1,27 @@
+{
+  "name": "@smallhillcz/rxjs-easing-operators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SmallhillCZ/rxjs-easing-operators.git"
+  },
+  "author": "Martin Kopeček <martin.kopecek@smallhill.cz>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SmallhillCZ/rxjs-easing-operators/issues"
+  },
+  "homepage": "https://github.com/SmallhillCZ/rxjs-easing-operators#readme",
+  "peerDependencies": {
+    "rxjs": "~6.3.3"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.3"
+  }
+}
