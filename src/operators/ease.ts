@@ -21,6 +21,9 @@ export function ease(options: easeOptions) {
 
   options = Object.assign({}, defaultOptions, options);
 
+  const easingFn = typeof options.easing === "string" ? easingFunctions[options.easing] : options.easing;
+  if(!easingFn) throw new Error("Invalid easing function.");
+
   return <T>(source: Observable<T>) => new Observable<T>(observer => {
 
     var interval;
@@ -38,7 +41,6 @@ export function ease(options: easeOptions) {
       target = value;
 
       const startTime = Date.now();
-      const easingFn = typeof options.easing === "string" ? easingFunctions[options.easing] : options.easing;
 
       if (interval) clearInterval(interval);
 
